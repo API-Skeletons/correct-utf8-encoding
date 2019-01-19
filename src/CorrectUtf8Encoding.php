@@ -59,7 +59,7 @@ final class CorrectUtf8Encoding
             $character = mb_substr($workingString, 0, 1, 'UTF-8');
 
             $characterUtf32BE= @mb_convert_encoding($character, 'UTF-32BE', 'UTF-8');
-            if (!$characterUtf32BE) {
+            if (! $characterUtf32BE) {
                 throw new Exception('invalid character' . "\n" . $character . "\n" . $input);
             }
             $characterCode = hexdec(bin2hex($characterUtf32BE));
@@ -72,9 +72,9 @@ final class CorrectUtf8Encoding
             // be the start of an invalid sequence.
             if ($characterCode >= 0xf0 && $characterCode <= 0xf7) {
                 $bytes = 4;
-            } else if ($characterCode >= 0xe0 && $characterCode <= 0xef) {
+            } elseif ($characterCode >= 0xe0 && $characterCode <= 0xef) {
                 $bytes = 3;
-            } else if ($characterCode >= 0xc0 && $characterCode <= 0xdf) {
+            } elseif ($characterCode >= 0xc0 && $characterCode <= 0xdf) {
                 $bytes = 2;
             }
 
@@ -138,7 +138,6 @@ final class CorrectUtf8Encoding
             // $character may be multiple characters by this point
             $workingString = mb_substr($workingString, $characterLength);
             $return .= $character;
-
         }
 
         // Re-run to fix double or more encodings

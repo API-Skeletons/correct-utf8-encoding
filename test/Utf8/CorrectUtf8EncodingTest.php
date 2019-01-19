@@ -37,5 +37,3 @@ final class CorrectUtf8EncodingTest extends TestCase
         $this->assertNotEquals("\xe2\x80\x0c", $resultString);
     }
 }
-
-
