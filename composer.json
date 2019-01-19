@@ -1,0 +1,21 @@
+{
+    "name": "api-skeletons/correct-utf8-encoding",
+    "description": "Correct badly encoded and multiple encoded UTF8 characters by examining each byte in a string.",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom H Anderson",
+            "email": "tom.h.anderson@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ApiSkeletons\\Utf8\\": "src/"
+        }
+    }
+}
