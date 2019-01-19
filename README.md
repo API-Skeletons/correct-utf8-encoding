@@ -9,9 +9,9 @@ The class provided by this module examines a string byte-by-byte.  It does not u
 Use
 ---
 
+```php
 use ApiSkeletons\Utf8;
 
-```php
 $correctUtf8Encoding = new Utf8\CorrectUtf8Encoding();
 
 $validString = $correctUtf8Encoding($invalidString);
