@@ -30,3 +30,10 @@ This library is unlike the other UTF8 correction tools available on packagist
 at the time of this writing.  Whether this tool is better than other offerings is based soley on your success with the tool.  For my needs this tool corrected a 20 year old dataset for the entire database field-by-field and byte-by-byte.
 
 Please don't hesitate to contact <contact@apiskeletons.com> with any stories of success or failure with this tool.
+
+
+Correct Entire Database
+-----------------------
+
+There is a companion application which uses this library to correct every invalid utf8 character in an entire database.
+Please see [https://github.com/API-Skeletons/utf8convert](https://github.com/API-Skeletons/utf8convert)
